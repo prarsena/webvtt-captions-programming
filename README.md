@@ -2,7 +2,7 @@
 
 Did you know that HTML video closed-captions and subtitles are customizable?
 
-![alt text](./CC01.png)
+![alt text](./screenshots/CC01.png)
 
 This project dives into the options available for the WebVTT closed caption format.
 
@@ -84,7 +84,7 @@ WEBVTT
 ```
 When we let the video play, we see these captions display like so:
 
-![alt text](./CC03.png)
+![alt text](./screenshots/CC03.png)
 
 Briefly:
 - `line` determines the height of the caption. 
@@ -129,7 +129,7 @@ And so you're back. <c.topright>From outer space</c>
 ```
 Which gives us the following captions:
 
-![alt text](./CC04.png)
+![alt text](./screenshots/CC04.png)
 
 The style classes are applied to the cue payloads by specifying: 
 ```
