@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Fun HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+<style>
+body {
+	margin-left: 5%;
+}
+
+h1 {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+video::cue(lang[lang="en-GB"]) {
+  color: cyan;
+}
+
+video::cue(.graphicDesignIsMyPassion) {
+	font-size: 1.5rem;
+	color: #ffe687;
+	background-color: #702963;
+	opacity: 0.99;
+	outline: thick double #32a1ce;
+}
+</style>
+</head>
+<body>
+<h1>Programming Closed Captions</h1>
+<p>The ultimate programming experience</p>
+<video controls src="./MIB2.mp4">
+    <track default kind="captions" srclang="en-US" src="./MIB2_test.vtt" />
+	If you see this text, you are not seeing the video.
+    Download the <a href="MIB2.mp4">MP4</a> video, and <a href="MIB2.vtt">subtitles</a>.
+  </video>
+
+<p>The WebVTT standard: <a href="https://www.w3.org/TR/webvtt1">https://www.w3.org/TR/webvtt1</a></p>
+
+<p>The VTTCue API: <a href="https://www.w3.org/TR/webvtt1/#vttcue"> https://www.w3.org/TR/webvtt1/#vttcue</a></p>
+<p>Supported CSS Properties: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::cue">https://developer.mozilla.org/en-US/docs/Web/CSS/::cue</a></p>
+
+</body>
+</html>

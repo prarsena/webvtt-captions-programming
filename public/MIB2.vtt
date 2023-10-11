@@ -1,0 +1,115 @@
+WEBVTT
+
+STYLE
+::cue(.topleft) {
+  color: #201bff;
+  background-color: #bbb9ff;
+}
+::cue(.topright) {
+  color: #ccb1b1;
+  background-color: #cc3535;
+  font-family: Georgia, serif;
+}
+::cue(.bottomleft) {
+  color: #6562ff;
+  text-shadow: 5px 10px 2px pink;
+}
+::cue(.bottomright) {
+  color: papayawhip;
+  background-image: linear-gradient(to bottom, #ff1900, #ebff1f);
+  font-size: 1.5rem;
+}
+
+STYLE
+/* 
+	These styles are generally around the Voice object (also lang). 
+	They're kind of ways to add classes in classes. 
+*/
+::cue([lang="en-US"]) { color: yellow; }
+::cue(v[voice="Fred"]) { color: #e7b8c1; }
+::cue(v[voice="Voicedude"]) { 
+	color: #e7b8c1; 
+	font-weight: bold;
+	text-decoration: underline dotted white;
+}
+::cue(v[voice="Bill"]) { color: #b4a9e3; }
+::cue(v[voice="Esme"]) { color: cyan }
+::cue(v[voice="Mary"]) { color: lime }
+::cue(i) { font-style: italic }
+::cue(.loud) { font-size: 2em }
+::cue(.frank){ font-size: 5rem; }
+
+NOTE On Regions
+- A WebVTT region represents a subpart of the video viewport and provides a limited rendering area for WebVTT caption or subtitle cues.
+- Regions provide a means to group caption or subtitle cues so the cues can be rendered together, which is particularly important when scrolling up.
+
+REGION
+id:fred
+width:40%
+lines:3
+regionanchor:0%,100%
+viewportanchor:10%,90%
+scroll:up
+
+REGION
+id:bill
+width:40%
+lines:3
+regionanchor:100%,100%
+viewportanchor:90%,90%
+scroll:up
+
+
+00:00:00.000 --> 00:00:02.800
+*Singing* And I <lang en-GB>learned <lang en-US>to get</lang> along and so</lang> you
+
+NOTE Notice that <lang en-GB> is defined in index.html. 
+
+00:00:02.800 --> 00:00:12.110 line:1 align:left position:2% size:50%
+Wow, I love <c.topleft>programming subtitles.</c>
+
+00:00:02.800 --> 00:00:12.110 line:2 align:right position:100% size:50% 
+<c.topright>Who knew it was such a powerful language?</c>
+
+00:00:02.800 --> 00:00:12.110 line:90 align:left position:5% size:50%
+There are <i>tons</i> of <b><c.bottomleft>styling options</c></b> available. 
+
+00:00:02.800 --> 00:00:12.110 line:90 align:right position:100% size:40% 
+<c.bottomright>Maybe next I should learn graphic design</c>
+
+00:00:05.800 --> 00:00:10.110 align:center size:60% 
+<c.graphicDesignIsMyPassion>THIS IS MY <v Voicedude>FAVORITE</v> ARTISTIC MEDIUM.</c>
+
+00:00:12.110 --> 00:00:15.070
+ have made you leave your key. If I had known for
+
+00:00:14.070 --> 00:00:20.640 region:fred align:left
+<v Fred>Hi, my name is Fred
+
+00:00:15.070 --> 00:00:20.640 region:bill align:right
+<v Bill>Hi, I’m Bill
+
+00:00:16.070 --> 00:00:20.640 region:fred align:left
+<v Fred>Would you like to get a coffee?
+
+00:00:17.070 --> 00:00:20.640 region:bill align:right
+<v Bill>Sure! I’ve only had one today.
+
+00:00:18.000 --> 00:00:20.640 region:fred align:left
+<v Fred>This is my fourth!
+
+00:00:18.500 --> 00:00:20.640 region:fred align:left
+<v Fred>OK, let’s go.
+
+00:00:18.130 --> 00:00:20.640
+ on now, go! Walk out the door!
+
+00:00:20.640 --> 00:00:27.910
+<v.loud Mary>Frank! Bring your head in this window before I
+
+00:00:27.910 --> 00:00:32.720
+ <c.topright>roll <c.bottomright>it up in</c> there. Got it!</c>
+
+00:00:32.720 --> 00:00:34.720 align:right 
+ <c.frank>FRANK!</c>
+
